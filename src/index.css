@@ -1,1 +1,123 @@
-* { margin: 0; padding: 0;}.container { width: 23%; height: 80vh; margin-left: auto; margin-right: auto; margin-top: 5rem; text-align: center; background-color: black;}.keywords>button { width: 30%; height: 17%; padding: 10px; margin: 1%; border-radius: 100%; font-size: 35px; border: none; background-color: #333333; color: rgb(247, 254, 252);}.container>input { width: 85%; height: 30%; text-align: right; text-align: bottom; margin-top: 5%; font-size: 500%; color: white; background-color: black; border: none;}.keywords { width: 17.4%; height: 53.85vh; position: absolute; margin-top: 10vh;}.operations-right { width: 5.8%; height: 53.89vh; position: absolute; margin-left: 17.1%; margin-top: 0.3vh;}.operations-right>button { width: 88%; height: 17%; margin: 1%; border-radius: 100%; font-size: 35px; border: none; background-color: #ff9f0a; color: rgb(247, 254, 252); margin-bottom: 6px;}.operations-up { position: absolute; width: 17.4%; height: 10vh;}.operations-up>button { width: 30%; height: 90%; padding: 10px; margin: 1%; border-radius: 100%; font-size: 35px; border: none; background-color: #a5a5a5; color: rgb(247, 254, 252);}.operations-down { position: absolute; width: 17.4%; height: 10vh; margin-top: 40vh;}.zero { width: 60%; height: 90%; padding: 10px; margin: 2%; border-radius: 60px; font-size: 35px; border: none; background-color: #333333; color: rgb(247, 254, 252);}.point { width: 30%; height: 90%; padding: 10px; margin: 2%; border-radius: 60px; font-size: 35px; border: none; background-color: #333333; color: rgb(247, 254, 252);}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 23%;
+    height: 80vh;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5rem;
+    text-align: center;
+    background-color: black;
+}
+
+.keywords>button {
+    width: 30%;
+    height: 17%;
+    padding: 10px;
+    margin: 1%;
+    border-radius: 100%;
+    font-size: 35px;
+    border: none;
+    background-color: #333333;
+    color: rgb(247, 254, 252);
+}
+
+.container>input {
+    width: 85%;
+    height: 30%;
+    text-align: right;
+    text-align: bottom;
+    margin-top: 5%;
+    font-size: 500%;
+    color: white;
+    background-color: black;
+    border: none;
+}
+
+.container>input:focus {
+    outline: none;
+}
+
+
+.keywords {
+    width: 17.4%;
+    height: 53.85vh;
+    position: absolute;
+    margin-top: 10vh;
+}
+
+.keywords:hover{
+    cursor: pointer;
+}
+
+.operations-right {
+    width: 5.8%;
+    height: 53.89vh;
+    position: absolute;
+    margin-left: 17.1%;
+    margin-top: 0.3vh;
+}
+
+.operations-right>button {
+    width: 88%;
+    height: 17%;
+    margin: 1%;
+    border-radius: 100%;
+    font-size: 35px;
+    border: none;
+    background-color: #ff9f0a;
+    color: rgb(247, 254, 252);
+    margin-bottom: 6px;
+}
+
+.operations-up {
+    position: absolute;
+    width: 17.4%;
+    height: 10vh;
+}
+
+.operations-up>button {
+    width: 30%;
+    height: 90%;
+    padding: 10px;
+    margin: 1%;
+    border-radius: 100%;
+    font-size: 35px;
+    border: none;
+    background-color: #a5a5a5;
+    color: rgb(247, 254, 252);
+}
+
+.operations-down {
+    position: absolute;
+    width: 17.4%;
+    height: 10vh;
+    margin-top: 40vh;
+}
+
+.zero {
+    width: 60%;
+    height: 90%;
+    padding: 10px;
+    margin: 2%;
+    border-radius: 60px;
+    font-size: 35px;
+    border: none;
+    background-color: #333333;
+    color: rgb(247, 254, 252);
+}
+
+.point {
+    width: 30%;
+    height: 90%;
+    padding: 10px;
+    margin: 2%;
+    border-radius: 60px;
+    font-size: 35px;
+    border: none;
+    background-color: #333333;
+    color: rgb(247, 254, 252);
+}
