@@ -19,7 +19,7 @@ let store = {
     ],
     operationsTop: [
         { val: "AC" },
-        { val: "C" },
+        { val: "±" },
         { val: "%" },
     ]
 };

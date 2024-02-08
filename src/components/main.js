@@ -26,10 +26,16 @@ export default class Main extends Component {
         this.setState({
             out: currentValue
         });
+        if (output.value === "0") output.value = "";
+        if (currentValue !== "=") {
+            if (output.value[output.value.length - 1] === "+" || output.value[output.value.length - 1] === "/" || output.value[output.value.length - 1] === "*" || output.value[output.value.length - 1] === "-") output.value = output.value.substring(0, output.value.length - 1) + currentValue;
+            else output.value += currentValue;
+        }
         try {
-            currentValue === "=" ? output.value = eval(output.value) : output.value += currentValue;
+            if (currentValue === "=") output.value = eval(output.value)
         } catch (error) {
             output.value = "Error!";
+            console.log(error);
             setTimeout(() => output.value = "0", 1500);
         }
     }
@@ -41,10 +47,10 @@ export default class Main extends Component {
             out: currentValue
         });
         if (output.value === "0") output.value = "";
-        if (currentValue === "C") output.value.length < 2 ? output.value = "0" : output.value = output.value.substring(0, output.value.length - 1)
+        if (currentValue === "±") output.value = output.value * -1;
         else if (currentValue === "AC") output.value = "0";
         else {
-            output.value += currentValue;
+            output.value = output.value / 100;
         }
     }
 
@@ -58,9 +64,10 @@ export default class Main extends Component {
     }
 
     render() {
+        let fs = 500;
         return (
             <div className='container'>
-                <input type='text' defaultValue={this.output.out} ref={this.refOutput}></input>
+                <input type='text' defaultValue={this.output.out} ref={this.refOutput} readOnly style={{ fontSize: `${fs}%` }} />
                 <div className='keywords'>
                     {store.keywords.map((item, index) => (
                         <button key={index} onClick={() => this.tapeKeywords(item.val)}>{item.val}</button>
